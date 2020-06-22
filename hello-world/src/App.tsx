@@ -1,31 +1,42 @@
-import React, {Component} from 'react';
-import logo from './logo.svg';
+import React, { Component } from 'react';
+import CharacterList, { Character } from './CharacterList'
 import './App.css';
 
+// Componentクラスの型引数のデフォルトは{}となっており、省略可能
 class App extends Component {
   render() {
-    const logoAttrs = {
-      alt: "logo",
-      className: "App-logo",
-      src: logo
-    };
-    const title = "こんにちは React";
-    const targets = ["World", "Kanae", "Yukina"]
+    const characters: Character[] = [
+      {
+        id: 1,
+        name: '羽咲 綾野',
+        age: 16,
+        height: 151
+      },
+      {
+        id: 2,
+        name: '荒垣 なぎさ',
+        age: 18,
+        height: 174
+      },
+      {
+        id: 3,
+        name: '泉 理子',
+        age: 18
+      }
+    ];
 
     return (
-      <div className="App">
-        <header className="App-header">
-          {
-            // コメントはこう書く
-          }
-          <img {...logoAttrs}  alt="logo" />
-          {title && <p>{title}</p>}
-          {targets.map(target => (
-            <p>Hello, {target}!</p>
-          ))}
+      <div className="container">
+        <header>
+          <h1>はねバド！キャラクター一覧</h1>
         </header>
+        {
+          // importしたCharacterListコンポーネントをタグとしてマウントしている
+          // また、コンポーネントの属性値としてschool, charactersというものを設定している
+        }
+        <CharacterList school="北小町高校" characters={characters} />
       </div>
-    );
+    )
   }
 }
 
