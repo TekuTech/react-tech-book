@@ -6,11 +6,13 @@ import * as serviceWorker from './serviceWorker';
 
 import App from './App';
 import Counter from './Counter';
+import Timer from './Timer'
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
     <Counter />
+    <Timer />
   </React.StrictMode>,
   document.getElementById('root')
 );
