@@ -23,7 +23,7 @@ const Counter: FC = () => {
       <Card>
         <Statistic className="number-board">
           <Statistic.Label>count</Statistic.Label>
-          <Statistic.Value>{ count }</Statistic.Value>
+          <Statistic.Value>{count}</Statistic.Value>
         </Statistic>
         <Card.Content>
           <div className="ui two buttons">

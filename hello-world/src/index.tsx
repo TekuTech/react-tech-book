@@ -4,15 +4,15 @@ import './index.css';
 import './styles/semantic.min.css'
 import * as serviceWorker from './serviceWorker';
 
-import App from './App';
-import Counter from './Counter';
-import Timer from './Timer'
+import App from './components/App';
+import Counter from './components/Counter';
+import TimerContainer from './containers/Timer';
 
 ReactDOM.render(
   <React.StrictMode>
     <App />
     <Counter />
-    <Timer />
+    <TimerContainer />
   </React.StrictMode>,
   document.getElementById('root')
 );
